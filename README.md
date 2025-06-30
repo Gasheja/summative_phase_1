@@ -1,20 +1,88 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# 🧠 TaskFlow — Task Management Web App
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+**TaskFlow** is a beginner-friendly task management web application built as part of a DevOps learning project. It allows users to create, update, and manage tasks while practicing DevOps best practices using Azure DevOps for planning, version control, and continuous integration (CI).
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+---
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## 🚀 Project Overview
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+This project demonstrates:
+- Full-stack web application development using Node.js and Express
+- Git-based version control using Azure Repos
+- Professional project planning with Azure Boards
+- CI automation using Azure Pipelines
+- Code linting and unit testing for quality assurance
+
+---
+
+## 🎯 Features
+
+| Feature               | Description |
+|-----------------------|-------------|
+| ✅ Create Task        | Users can add a new task with title, description, and deadline |
+| ✅ View All Tasks     | Fetch a list of all tasks stored in the database |
+| ✅ Update Task        | Modify task details like title, status, or deadline |
+| ✅ Delete Task        | Remove a task from the list (optional) |
+
+---
+
+## 🧱 Tech Stack
+
+- **Backend**: Node.js, Express
+- **Database**: SQLite (for simplicity)
+- **CI/CD**: Azure Pipelines
+- **Version Control**: Azure Repos (Git)
+- **Testing**: Jest
+- **Linting**: ESLint
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```
+git clone https://dev.azure.com/YOUR_ORG/YOUR_PROJECT/_git/summative_phase_1
+cd summative_phase_1
+```
+# Install Dependencies
+```
+npm Install
+```
+# Run the application
+```
+node app.js
+```
+The server will start at http://localhost:3000.
+
+# 🧪 Testing the API
+I used Postman test endpoints:
+
+## ▶️ Create a Task
+
+```
+POST http://localhost:3000/api/tasks
+```
+### JSON body:
+```
+{
+  "title": "Finish DevOps Assignment",
+  "description": "Push baseline code and write README",
+  "deadline": "2025-07-01"
+}
+```
+# Get all tasks
+
+```
+GET http://localhost:3000/api/tasks
+```
+# 🔁 Continuous Integration
+This project uses Azure Pipelines for Continuous Integration(CI). It automatically:
+
+-Installs dependencies
+
+-Lints code using ESLint
+
+-Runs unit tests using Jest
+
+Pipeline is defined in ```azure-pipelines.yml`` and runs on every Pull Request.
